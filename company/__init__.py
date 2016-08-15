@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Company namespace package.
 """
