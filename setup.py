@@ -7,7 +7,7 @@ from pip.req import parse_requirements
 
 from setuptools import find_packages, setup
 
-execfile('company/package/version.py')
+exec(open('company/package/version.py').read())
 
 setup(name='primogen',
       version=__version__,
