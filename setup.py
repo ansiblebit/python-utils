@@ -7,7 +7,7 @@ from pip.req import parse_requirements
 
 from setuptools import find_packages, setup
 
-execfile('company/package/version.py')
+exec(open('company/package/version.py').read())
 
 setup(name='primogen',
       version=__version__,
@@ -16,9 +16,9 @@ setup(name='primogen',
       author_email='steenzout@ymail.com',
       maintainer='Pedro Salgado',
       maintainer_email='steenzout@ymail.com',
-      url='https://github.com/steenzout/python-primogen',
+      url='https://github.com/steenzout/python-package',
       namespace_packages=('company',),
-      packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests', 'company')),
+      packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests')),
       install_requires=[
             str(pkg.req) for pkg in parse_requirements(
                     'requirements.txt', session=pip.download.PipSession())],

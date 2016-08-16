@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 .. module:: company.package.tests
     :platform: Unix

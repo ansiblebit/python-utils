@@ -23,3 +23,11 @@ after_success:
   - pylint company
   - pip install coveralls
   - coveralls
+
+deploy:
+  provider: pypi
+  user: steenzout
+  password:
+    secure: todo
+  on:
+    tags: true
