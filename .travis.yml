@@ -30,5 +30,4 @@ deploy:
   password:
     secure: todo
   on:
-    branch: master
     tags: true
