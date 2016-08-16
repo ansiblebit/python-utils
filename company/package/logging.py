@@ -34,7 +34,7 @@ def load_configuration(config_file=DEFAULT_CONFIG_FILE):
     try:
         config.fileConfig(config_file, disable_existing_loggers=False)
         logging.getLogger(__name__).info('%s configuration file was loaded.', config_file)
-    except StandardError as error:
+    except Exception as e:
         logging.getLogger(__name__).error('Failed to load configuration from %s!', config_file)
-        logging.getLogger(__name__).debug(str(error), exc_info=True)
-        raise error
+        logging.getLogger(__name__).debug(str(e), exc_info=True)
+        raise e
