@@ -16,7 +16,7 @@ setup(name='primogen',
       author_email='steenzout@ymail.com',
       maintainer='Pedro Salgado',
       maintainer_email='steenzout@ymail.com',
-      url='https://github.com/steenzout/python-primogen',
+      url='https://github.com/steenzout/python-package',
       namespace_packages=('company',),
       packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests')),
       install_requires=[
