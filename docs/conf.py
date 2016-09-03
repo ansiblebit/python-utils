@@ -149,13 +149,6 @@ html_theme = 'alabaster'
 # documentation.
 #
 html_theme_options = {
-    u'description': u'company.package package.',
-    u'fixed_sidebar': True,
-    u'github_button': True,
-    u'github_repo': u'python-company-package',
-    u'github_user': u'company',
-    u'page_width': u'1220px',
-    u'sidebar_width': u'220px'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
