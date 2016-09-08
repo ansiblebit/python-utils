@@ -9,6 +9,19 @@ from setuptools import find_packages, setup
 
 exec(open('company/package/version.py').read())
 
+
+def requirements(requirements_file):
+    """Return package mentioned in the given file.
+    Args:
+        requirements_file (str): path to the requirements file to be parsed.
+    Returns:
+        (list): 3rd-party package dependencies contained in the file.
+    """
+    return [
+        str(pkg.req) for pkg in parse_requirements(
+            requirements_file, session=pip.download.PipSession())]
+
+
 setup(name='primogen',
       version=__version__,
       description='Python basic package.',
@@ -19,9 +32,5 @@ setup(name='primogen',
       url='https://github.com/steenzout/python-package',
       namespace_packages=('company',),
       packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests')),
-      install_requires=[
-            str(pkg.req) for pkg in parse_requirements(
-                    'requirements.txt', session=pip.download.PipSession())],
-      tests_require=[
-            str(pkg.req) for pkg in parse_requirements(
-                    'test-requirements.txt', session=pip.download.PipSession())],)
+      install_requires=requirements('requirements.txt'),
+      tests_require=requirements('requirements-test.txt'))

@@ -12,7 +12,8 @@ class VersionTestCase(unittest.TestCase):
         """
         Tests the version module attributes.
         """
-        from company.package import version
+        import company.package
 
-        self.assertFalse(version.__dict__ is None)
-        self.assertTrue('__version__' in version.__dict__)
+        self.assertTrue(
+            company.package.version() == company.package.__version__
+        )
