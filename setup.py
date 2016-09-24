@@ -12,8 +12,10 @@ exec(open('company/package/version.py').read())
 
 def requirements(requirements_file):
     """Return package mentioned in the given file.
+
     Args:
         requirements_file (str): path to the requirements file to be parsed.
+
     Returns:
         (list): 3rd-party package dependencies contained in the file.
     """
