@@ -24,7 +24,7 @@ def requirements(requirements_file):
             requirements_file, session=pip.download.PipSession())]
 
 
-setup(name='.'.join(metadata.__name__.split('.')[:-1]),
+setup(name=__package__,
       version=__version__,
       description=__description__,
       author=__author__,

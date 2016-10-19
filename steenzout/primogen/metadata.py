@@ -10,6 +10,9 @@ __description__ = 'Python basic primogen.'
 
 __maintainer__ = 'Pedro Salgado'
 __maintainer_email__ = 'steenzout@ymail.com'
+
+__package__ = '.'.join(__name__.split('.')[:-1])
+
 __url__ = 'https://github.com/steenzout/python-primogen/'
 
 __version__ = '0.0.1'
