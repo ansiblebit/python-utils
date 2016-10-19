@@ -7,7 +7,7 @@ from pip.req import parse_requirements
 
 from setuptools import find_packages, setup
 
-exec(open('steenzout/primogen/version.py').read())
+exec(open('steenzout/primogen/metadata.py').read())
 
 
 def requirements(requirements_file):

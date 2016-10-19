@@ -7,7 +7,7 @@
 .. moduleauthor:: Your Name <email address>
 """
 
-from steenzout.primogen.version import __version__
+from steenzout.primogen.metadata import __version__
 
 
 def version():
