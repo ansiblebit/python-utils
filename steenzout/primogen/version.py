@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-.. module:: company.package.version
+.. module:: steenzout.primogen.version
     :platform: Unix
     :synopsis: Version module.
 

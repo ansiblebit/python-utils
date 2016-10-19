@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# company.package package documentation build configuration file.
+# steenzout.primogen primogen documentation build configuration file.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -26,7 +26,7 @@ import semantic_version
 
 from recommonmark.parser import CommonMarkParser
 
-from company.package import __version__
+from steenzout.primogen import __version__
 
 _version = semantic_version.Version(__version__)
 
@@ -71,7 +71,7 @@ source_suffix = [
 master_doc = 'index'
 
 # General information about the project.
-project = u'company.package'
+project = u'steenzout.primogen'
 copyright = u'2016, Pedro Salgado'
 author = u'Pedro Salgado'
 
@@ -290,7 +290,7 @@ latex_elements = {
 latex_documents = [(
     master_doc,
     'py_company_package.tex',
-    u'company.package documentation',
+    u'steenzout.primogen documentation',
     author,
     'manual'
 )]
@@ -341,7 +341,7 @@ latex_documents = [(
 man_pages = [(
     master_doc,
     'py_company_package',
-    'company.package documentation',
+    'steenzout.primogen documentation',
     [author],
     1
 )]
@@ -366,10 +366,10 @@ man_pages = [(
 texinfo_documents = [(
     master_doc,
     'py_company_package',
-    'company.package documentation',
+    'steenzout.primogen documentation',
      author,
     '',
-    'company.package documentation.',
+    'steenzout.primogen documentation.',
     'Miscellaneous'
 )]
 

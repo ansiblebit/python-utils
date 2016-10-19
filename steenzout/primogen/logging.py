@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-.. module:: company.package.logging
+.. module:: steenzout.primogen.logging
     :platform: Unix
     :synopsis: Logging utilities.
 
@@ -16,14 +16,14 @@ import logging.config as config
 import os
 
 
-DEFAULT_CONFIG_FILE = '/etc/package/logging.conf'
+DEFAULT_CONFIG_FILE = '/etc/primogen/logging.conf'
 
 
 def load_configuration(config_file=DEFAULT_CONFIG_FILE):
     """
     Loads logging configuration from the given configuration file.
 
-    :param config_file: the configuration file (default=/etc/package/logging.conf)
+    :param config_file: the configuration file (default=/etc/primogen/logging.conf)
     :type config_file: str
     """
     if not os.path.exists(config_file) or not os.path.isfile(config_file):

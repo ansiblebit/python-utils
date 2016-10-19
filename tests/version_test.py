@@ -12,8 +12,8 @@ class VersionTestCase(unittest.TestCase):
         """
         Tests the version module attributes.
         """
-        import company.package
+        import steenzout.primogen
 
         self.assertTrue(
-            company.package.version() == company.package.__version__
+            steenzout.primogen.version() == steenzout.primogen.__version__
         )

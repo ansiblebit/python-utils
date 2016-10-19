@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Company namespace package.
+Company namespace primogen.
 """
 try:
     import pkg_resources

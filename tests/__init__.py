@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-.. module:: company.package.tests
+.. module:: steenzout.primogen.tests
     :platform: Unix
     :synopsis:
 
@@ -9,8 +9,8 @@
 
 import os
 
-import company.package.config
-import company.package.logging
+import steenzout.primogen.config
+import steenzout.primogen.logging
 
 import logging
 
@@ -18,7 +18,7 @@ import unittest
 
 
 LOGGING_CONFIG_FILE = '%s/tests/logging.conf' % os.curdir
-PACKAGE_CONFIG_FILE = '%s/tests/package.cfg' % os.curdir
+PACKAGE_CONFIG_FILE = '%s/tests/primogen.cfg' % os.curdir
 
 
 class Basic(object):
@@ -33,10 +33,10 @@ class Basic(object):
         """
         logging.getLogger('%s.%s' % (__name__, 'Basic')).info('setup_configuration()')
 
-        company.package.config.reset()
-        company.package.config.load_configuration(PACKAGE_CONFIG_FILE)
+        steenzout.primogen.config.reset()
+        steenzout.primogen.config.load_configuration(PACKAGE_CONFIG_FILE)
 
-        self.configuration = company.package.config.get()
+        self.configuration = steenzout.primogen.config.get()
 
     def setup_logger(self):
         """
@@ -45,7 +45,7 @@ class Basic(object):
         """
         logging.getLogger('%s.%s' % (__name__, 'Basic')).info('setup_logger()')
 
-        company.package.logging.load_configuration(LOGGING_CONFIG_FILE)
+        steenzout.primogen.logging.load_configuration(LOGGING_CONFIG_FILE)
 
         self.logger = logging.getLogger('%s.%s' % (__name__, self.__class__.__name__))
 
