@@ -24,14 +24,15 @@ def requirements(requirements_file):
             requirements_file, session=pip.download.PipSession())]
 
 
-setup(name='steenzout.primogen',
+setup(name='.'.join(metadata.__name__.split('.')[:-1]),
       version=__version__,
-      description='Python basic primogen.',
-      author='Pedro Salgado',
-      author_email='steenzout@ymail.com',
-      maintainer='Pedro Salgado',
-      maintainer_email='steenzout@ymail.com',
-      url='https://github.com/steenzout/python-primogen/',
+      description=__description__,
+      author=__author__,
+      author_email=__author_email__,
+      classifiers=__classifiers__,
+      maintainer=__maintainer__,
+      maintainer_email=__maintainer_email__,
+      url=__url__,
       namespace_packages=('steenzout',),
       packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests')),
       install_requires=requirements('requirements.txt'),
