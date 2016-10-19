@@ -6,8 +6,7 @@ branches:
 
 cache:
   directories:
-    - "${HOME}/virtualenv"
-    - "${TRAVIS_BUILD_DIR}/.tox"
+    - "${HOME}/.pip"
 
 python:
   - 2.6
@@ -30,7 +29,7 @@ install:
 
 script:
   - tox
-  - "find ${TRAVIS_BUILD_DIR}/.tox -name log -o -name __pycache__ -type d | xargs -I {} rm -rf {}"
+  - "find ${HOME}/.pip -name log -o -name __pycache__ -type d | xargs -I {} rm -rf {}"
 
 after_success:
   - pylint company
