@@ -50,7 +50,7 @@ clean:
 
 .PHONY: apidoc
 apidoc:
-	sphinx-apidoc -f -T --separate -o apidoc ../company
+	sphinx-apidoc -f -T --separate -o apidoc ../steenzout
 	ls apidoc/*.rst | xargs -I {} sed -i .bak '/:undoc-members:/d' {}
 	rm apidoc/*.bak
 	@echo "apidoc generation finished, look at the " \
@@ -99,9 +99,9 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/py_company_package.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/py_steenzout_primogen.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/py_company_package.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/py_steenzout_primogen.qhc"
 
 .PHONY: applehelp
 applehelp:
@@ -118,8 +118,8 @@ devhelp:
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/py_company_package"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/py_company_package"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/py_steenzout_primogen"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/py_steenzout_primogen"
 	@echo "# devhelp"
 
 .PHONY: epub
