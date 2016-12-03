@@ -45,3 +45,10 @@ deploy:
     secure: todo
   on:
     tags: true
+
+notifications:
+  slack:
+    rooms:
+      secure: cMw16G5yS/zFg74NZnd/e0KeLlYvG2R1ZNM0JsGW7z+9gfCIBEGr/2aDLR/DPw4WejSpeCWVIS+rqmfYGKKRR4irRkCNxGJCYe/Tfmo9/ZNH9rXK0FM18jQyUx8y6pyMGW+u4f4UWf+hQXrbh5ucjOrCAeWIREIWlOVWo0L0/V8=
+    on_success: always
+    on_failure: always
