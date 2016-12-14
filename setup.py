@@ -21,7 +21,7 @@ def requirements(requirements_file):
     """
     return [
         str(pkg.req) for pkg in parse_requirements(
-            requirements_file, session=pip.download.PipSession())]
+            requirements_file, session=pip.download.PipSession()) if pkg.req is not None]
 
 
 setup(name=__package__,
