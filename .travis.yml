@@ -6,8 +6,10 @@ branches:
 
 cache:
   directories:
-    - "${HOME}/virtualenv"
-    - "${TRAVIS_BUILD_DIR}/.tox"
+    - "${HOME}/.pip"
+
+before_cache:
+  - "find ${HOME}/.pip -name log -o -name __pycache__ -type d | xargs -I {} rm -rf {}"
 
 python:
   - 2.6
@@ -30,10 +32,9 @@ install:
 
 script:
   - tox
-  - "find ${TRAVIS_BUILD_DIR}/.tox -name log -o -name __pycache__ -type d | xargs -I {} rm -rf {}"
 
 after_success:
-  - pylint company
+  - pylint steenzout
   - pip install coveralls
   - coveralls
 
@@ -44,3 +45,17 @@ deploy:
     secure: todo
   on:
     tags: true
+
+notifications:
+  email: false
+  slack:
+    template:
+      - "%{repository_name}@%{branch} %{commit} : [%{build_number}] %{result} "
+      - "%{build_url}"
+      - "'%{commit_subject}' by %{author}"
+      - "%{elapsed_time} : %{duration}"
+      - "%{message}"
+    rooms:
+      secure: cMw16G5yS/zFg74NZnd/e0KeLlYvG2R1ZNM0JsGW7z+9gfCIBEGr/2aDLR/DPw4WejSpeCWVIS+rqmfYGKKRR4irRkCNxGJCYe/Tfmo9/ZNH9rXK0FM18jQyUx8y6pyMGW+u4f4UWf+hQXrbh5ucjOrCAeWIREIWlOVWo0L0/V8=
+    on_success: always
+    on_failure: always
