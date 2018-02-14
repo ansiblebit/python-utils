@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Unit tests for the ansiblebit.utils.oracle_java.parse_url() function."""
+"""Unit tests for the ansiblebit.utils.oracle_java.parse_page() function."""
 
 from ansiblebit.utils import oracle_java
 
@@ -12,21 +12,21 @@ def _assert(expected, gen_out):
         assert expected_download in out
 
 
-def test_parse_url_jdk8():
+def test_parse_page_jdk8():
     expected = []
-    out = oracle_java.parse_url(oracle_java.URL_JDK_8)
+    out = oracle_java.parse_page(oracle_java.URL_JDK_8)
 
     _assert(expected, out)
 
 
-def test_parse_url_jdk9():
+def test_parse_page_jdk9():
     expected = []
-    out = oracle_java.parse_url(oracle_java.URL_JDK_9)
+    out = oracle_java.parse_page(oracle_java.URL_JDK_9)
 
     _assert(expected, out)
 
 
-def test_parse_url_jre8():
+def test_parse_page_jre8():
     prefix = 'http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808'
     expected = [
         oracle_java.Download(title='Linux x86',
@@ -88,13 +88,13 @@ def test_parse_url_jre8():
                              md5='404c148a2d509ff5271222aeac882e8a',
                              sha256='929a7cc795cffb3304271be9ffcb43f08c2c1cc077dee67f8487649661ee30d0')
     ]
-    out = oracle_java.parse_url(oracle_java.URL_JRE_8)
+    out = oracle_java.parse_page(oracle_java.URL_JRE_8)
 
     _assert(expected, out)
 
 
-def test_parse_url_jre9():
+def test_parse_page_jre9():
     expected = []
-    out = oracle_java.parse_url(oracle_java.URL_JRE_9)
+    out = oracle_java.parse_page(oracle_java.URL_JRE_9)
 
     _assert(expected, out)

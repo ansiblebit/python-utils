@@ -80,11 +80,33 @@ def get_download_links(version=9, update=None):
     return None
 
 
+def parse_page(html, version=9):
+    """Returns the download targets present in the given HTML document.
+
+    Args:
+        html (str): HTML document to be parsed.
+        version (int): Java version.
+
+    Returns:
+        (generator[Download]): the download targets present in the given URL.
+    """
+    for line in html:
+        continue
+
+
 def parse_url(url, version=9):
-    """Parse the URL and returns targets.
+    """Returns the download targets present in the given URL.
 
     Args:
         url (str): download URL to be parsed.
         version (int): Java version.
+
+    Returns:
+        (generator[Download]): the download targets present in the given URL.
     """
-    return None
+    # download document
+    doc = '<html></html>'
+
+    # parse page
+    return parse_page(doc, version=version)
+
