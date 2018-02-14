@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Unit tests for the metadata module."""
 
-from steenzout.primogen import metadata
+from ansiblebit.lib import metadata
 
 
 def test_attributes():

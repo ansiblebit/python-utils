@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-"""Integration tests for steenzout.primogen package."""
+"""Integration tests for ansiblebit.lib package."""

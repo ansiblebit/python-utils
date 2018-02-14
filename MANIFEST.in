@@ -8,5 +8,5 @@ include tox.ini
 
 recursive-include tests *.py
 
-recursive-exclude steenzout *.pyc
-recursive-exclude steenzout *.pyo
+recursive-exclude ansiblebit *.pyc
+recursive-exclude ansiblebit *.pyo

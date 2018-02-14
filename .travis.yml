@@ -34,13 +34,13 @@ script:
   - tox
 
 after_success:
-  - pylint steenzout
+  - pylint ansiblebit
   - pip install coveralls
   - coveralls
 
 deploy:
   provider: pypi
-  user: steenzout
+  user: ansiblebit
   password:
     secure: todo
   on:

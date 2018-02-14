@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 
+# Copyright
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ import semantic_version
 from recommonmark.parser import CommonMarkParser
 
 
-_package = 'steenzout.primogen'
+_package = 'ansiblebit.lib'
 _version = semantic_version.Version('0.0.1')
 
 # -- General configuration ------------------------------------------------

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2016 Pedro Salgado
+# Copyright 2018 ansiblebit
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-"""steenzout namespace package."""
+"""ansiblebit namespace package."""
 
 try:
     __import__('pkg_resources').declare_namespace(__name__)
