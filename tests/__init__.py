@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-"""Tests for ansiblebit.lib package."""
+"""Tests for ansiblebit.utils package."""

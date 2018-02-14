@@ -37,7 +37,7 @@ import semantic_version
 from recommonmark.parser import CommonMarkParser
 
 
-_package = 'ansiblebit.lib'
+_package = 'ansiblebit.utils'
 _version = semantic_version.Version('0.0.1')
 
 # -- General configuration ------------------------------------------------

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Unit tests for the metadata module."""
 
-from ansiblebit.lib import metadata
+from ansiblebit.utils import metadata
 
 
 def test_attributes():

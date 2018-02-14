@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Unit tests for the package module."""
 
-import ansiblebit.lib
+import ansiblebit.utils
 
 
 def test_version():
     """Test version() function."""
-    assert ansiblebit.lib.version() == ansiblebit.lib.__version__
+    assert ansiblebit.utils.version() == ansiblebit.utils.__version__

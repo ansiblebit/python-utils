@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Unit tests for the ansiblebit.lib.oracle_java.parse_url() function."""
+"""Unit tests for the ansiblebit.utils.oracle_java.parse_url() function."""
 
-from ansiblebit.lib import oracle_java
+from ansiblebit.utils import oracle_java
 
 
 def test_parse_url_jdk8():

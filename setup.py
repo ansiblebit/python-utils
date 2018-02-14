@@ -7,17 +7,17 @@ from pip.req import parse_requirements
 
 from setuptools import find_packages, setup
 
-exec(open('ansiblebit/lib/metadata.py').read())
+exec(open('ansiblebit/utils/metadata.py').read())
 
 
 def requirements(requirements_file):
-    """Return lib mentioned in the given file.
+    """Return utils mentioned in the given file.
 
     Args:
         requirements_file (str): path to the requirements file to be parsed.
 
     Returns:
-        (list): 3rd-party lib dependencies contained in the file.
+        (list): 3rd-party utils dependencies contained in the file.
     """
     return [
         str(pkg.req) for pkg in parse_requirements(

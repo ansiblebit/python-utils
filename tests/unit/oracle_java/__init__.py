@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-"""Unit tests for ansiblebit.lib.oracle_java package."""
+"""Unit tests for ansiblebit.utils.oracle_java package."""
