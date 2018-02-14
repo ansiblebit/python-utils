@@ -4,20 +4,26 @@
 from ansiblebit.utils import oracle_java
 
 
+def _assert(expected, gen_out):
+    assert gen_out is not None
+
+    out = [x for x in gen_out]
+    for expected_download in expected:
+        assert expected_download in out
+
+
 def test_parse_url_jdk8():
     expected = []
     out = oracle_java.parse_url(oracle_java.URL_JDK_8)
 
-    for expected_download in expected:
-        assert expected_download in out
+    _assert(expected, out)
 
 
 def test_parse_url_jdk9():
     expected = []
     out = oracle_java.parse_url(oracle_java.URL_JDK_9)
 
-    for expected_download in expected:
-        assert expected_download in out
+    _assert(expected, out)
 
 
 def test_parse_url_jre8():
@@ -84,13 +90,11 @@ def test_parse_url_jre8():
     ]
     out = oracle_java.parse_url(oracle_java.URL_JRE_8)
 
-    for expected_download in expected:
-        assert expected_download in out
+    _assert(expected, out)
 
 
 def test_parse_url_jre9():
     expected = []
     out = oracle_java.parse_url(oracle_java.URL_JRE_9)
 
-    for expected_download in expected:
-        assert expected_download in out
+    _assert(expected, out)
