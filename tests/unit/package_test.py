@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Unit tests for the package module."""
 
-import steenzout.primogen
+import ansiblebit.utils
 
 
 def test_version():
     """Test version() function."""
-    assert steenzout.primogen.version() == steenzout.primogen.__version__
+    assert ansiblebit.utils.version() == ansiblebit.utils.__version__

@@ -7,17 +7,17 @@ from pip.req import parse_requirements
 
 from setuptools import find_packages, setup
 
-exec(open('steenzout/primogen/metadata.py').read())
+exec(open('ansiblebit/utils/metadata.py').read())
 
 
 def requirements(requirements_file):
-    """Return primogen mentioned in the given file.
+    """Return utils mentioned in the given file.
 
     Args:
         requirements_file (str): path to the requirements file to be parsed.
 
     Returns:
-        (list): 3rd-party primogen dependencies contained in the file.
+        (list): 3rd-party utils dependencies contained in the file.
     """
     return [
         str(pkg.req) for pkg in parse_requirements(
@@ -33,7 +33,7 @@ setup(name=__package__,
       maintainer=__maintainer__,
       maintainer_email=__maintainer_email__,
       url=__url__,
-      namespace_packages=('steenzout',),
+      namespace_packages=('ansiblebit',),
       packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests')),
       install_requires=requirements('requirements.txt'),
       tests_require=requirements('requirements-test.txt'))

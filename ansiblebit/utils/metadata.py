@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2016 Pedro Salgado
+# Copyright 2018 ansiblebit
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-"""steenzout namespace package."""
+"""Metadata module"""
 
-try:
-    __import__('pkg_resources').declare_namespace(__name__)
-except ImportError:
-    import pkgutil
-    __path__ = pkgutil.extend_path(__path__, __name__)
+__author__ = 'Pedro Salgado'
+__author_email__ = 'steenzout@ymail.com'
+
+__classifiers__ = []
+
+__description__ = 'Python library to support Ansible roles.'
+
+__maintainer__ = 'Pedro Salgado'
+__maintainer_email__ = 'steenzout@ymail.com'
+
+__package__ = 'ansiblebit.utils'
+
+__url__ = 'https://github.com/ansiblebit/python-utils/'
+
+__version__ = '0.0.1'
